@@ -1,3 +1,5 @@
+require 'Date'
+
 class Week
   # starts on a monday
   attr_accessor :start_date, :monday, :tuesday, :wednesday, :thursday, :friday, :saturday, :sunday
