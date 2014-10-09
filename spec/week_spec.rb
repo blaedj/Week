@@ -1,4 +1,4 @@
-require './week'
+require './lib/sane_week'
 
 describe Week do
 

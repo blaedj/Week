@@ -1,0 +1,12 @@
+Gem::Specification.new do |s|
+  s.name        = 'sane_week'
+  s.version     = '0.0.1'
+  s.date        = '2014-10-09'
+  s.summary     = "weeks starting on mondays"
+  s.description = "A simple gem for weeks starting on monday"
+  s.authors     = ["Blaed Johnston"]
+  s.email       = 'blaedj@gmail.com'
+  s.files       = ["lib/sane_week.rb"]
+  s.homepage    = 'http://github.com/blaedj/week'
+  s.license      = 'MIT'
+end
