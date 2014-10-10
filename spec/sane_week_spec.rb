@@ -14,7 +14,7 @@ describe Week do
 
     describe "on a day that is not monday" do
       before do
-        the_date = Date.new(2014, 10, 7)
+        the_date = Date.new(2014, 10, 12)
         allow(Date).to receive(:today).and_return(the_date)
       end
 
@@ -32,7 +32,7 @@ describe Week do
 
   describe "when created with a non-monday date" do
     before do
-      @week = Week.new(Date.new(2014, 10, 14))
+      @week = Week.new(Date.new(2014, 6, 1))
     end
 
     it "should start on a monday" do
@@ -40,9 +40,23 @@ describe Week do
     end
 
     it "should start on the closest past monday" do
-      expect(@week.start_date).to eql(Date.new(2014, 10, 13))
+      expect(@week.start_date).to eql(Date.new(2014, 05, 26))
     end
   end
+
+  describe "end date" do
+    before do
+      @week = Week.new(Date.new(2014, 6, 1))
+    end
+
+    it "should be on a sunday" do
+      expect(@week.end_date.sunday?).to be_truthy
+    end
+    it " should be 6 days after the start date" do
+      expect(@week.end_date).to eql(@week.start_date + 6)
+    end
+  end
+
 
   describe "days of the week" do
     before do
