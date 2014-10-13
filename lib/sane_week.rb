@@ -1,5 +1,3 @@
-require 'Date'
-
 # a week that always starts on a monday
 class Week
 
